@@ -1,23 +1,25 @@
-<sdf version="1.7">
-
+<?xml version="1.0" ?>
+<sdf version="1.5">
   <world name="default">
+    <physics type="ode">
+      ...
+    </physics>
+    
+    <scene>
+      ...
+    </scene>
 
-    <include>
-      <uri>model://ground_plane</uri>
-    </include>
+    <model name="box">
+      ...
+    </model>
 
-    <!-- Light source -->
-    <include>
-      <uri>model://sun</uri>
-    </include>
+    <model name="sphere">
+      ...
+    </model>
 
-    <!-- World camera -->
-    <gui fullscreen='0'>
-      <camera name='world_camera'>
-        <pose>4.927360 -4.376610 3.740080 0.000000 0.275643 2.356190</pose>
-        <view_controller>orbit</view_controller>
-      </camera>
-    </gui>
+    <light name="spotlight">
+      ...
+    </light>
 
   </world>
 </sdf>
